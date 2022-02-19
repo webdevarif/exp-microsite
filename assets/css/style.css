@@ -1,0 +1,19 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 64 | /     @include media-breakpoin-up(lg){
+ * 65 | |         --heading-fs: 36px;
+ * 66 | \     }
+ *    '
+ *   assets\scss\_common.scss 64:5  @import
+ *   assets\scss\style.scss 32:9    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 64 \2502  \250c      @include media-breakpoin-up(lg){\a 65 \2502  \2502          --heading-fs: 36px;\a 66 \2502  \2514      }\a    \2575 \a   assets\\scss\\_common.scss 64:5  @import\a   assets\\scss\\style.scss 32:9    root stylesheet";
+}

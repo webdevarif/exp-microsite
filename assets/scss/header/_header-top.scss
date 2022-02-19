@@ -1,0 +1,324 @@
+/*--
+/*  2.1 - Header Top CSS
+/*----------------------------------------*/
+
+// Header
+.header {
+    z-index: 999;
+    position: relative;
+    width: 100%;
+
+    &-top{
+        width: 100%;
+        background: $white;
+        color: $black;
+
+        @include media-breakpoint-up(lg){
+            padding: 20px 0;
+        }
+    }
+}
+
+
+// Header Logo 
+.header-logo {
+    
+}
+
+// Header Navigation
+.header-navigation {
+    background: whitesmoke;
+    // display: none;
+    & .main-menu {
+        display: flex;
+
+        @media(min-width: 991px){
+            & > li:not(:first-child):before{
+                --menu-list-item-dot-size: 3px;
+                content: "";
+                width: var(--menu-list-item-dot-size);
+                height: var(--menu-list-item-dot-size);
+                background: $black;
+                border-radius: 50em;
+                position: absolute;
+                left: -2px;
+                top: 50%;
+            }
+        }
+
+        & li {
+            position: relative;
+            padding: 55px 15px;
+
+            .apiary-dArrows {
+                transform: translateX(-50%) rotate(-90deg);
+                position: absolute;
+                left: 50%;
+                bottom: 30px;
+                @media #{$tablet-device}{
+                    display: none;
+                }
+            }
+            & a {
+                font-size: 16px;
+                font-weight: 500;
+                font-family: $body-font;
+                color: $black;
+            }
+
+            &.active-menu {
+
+                & > a {
+                    color: $primary;
+                }
+
+                & > .menu-icon  {
+
+                    &::after {
+                        color: $primary;
+                    }
+                }
+            }
+
+            &:hover {
+
+                & > .menu-icon,
+                & > a {
+                    color: $primary;
+
+                    &::after {
+                        color: $primary;
+                    }
+                }
+
+
+                & .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+
+            & .menu-icon {
+
+                &::after {
+                    content: '\f16c';
+                    font-family: 'flaticon';
+                    font-size: 10px;
+                    color: $white;
+                    margin-left: 5px;
+                    transition: $transition-default;
+                }
+            }
+
+            & .sub-menu {
+                position: absolute;
+                top: 110%;
+                left: 0;
+                width: 270px;
+                background: $white;
+                box-shadow: 0 2px 29px rgba(0, 0, 0, .05);
+                padding: 20px 0;
+                border-radius: 5px;
+                z-index: 99;
+                border-top: 2px solid $primary;
+                opacity: 0;
+                visibility: hidden;
+                transition: $transition-default;
+
+                & li {
+                    padding: 0;
+
+                    & a {
+                        padding: 5px 30px;
+                        font-size: 16px;
+                        font-family: $body-font;
+                        font-weight: 500;
+                        color: #2e3d49;
+                        text-transform: capitalize;
+                        display: block;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: $primary;
+                            width: 10px;
+                            height: 2px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: $transition-default;
+
+                        }
+                    }
+
+                    &.active {
+
+                        & > a {
+                            color: $primary;
+                            padding-left: 37px;
+
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                                left: 15px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+
+                        & > a {
+                            padding-left: 37px;
+                            color: $primary;
+
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                                left: 15px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header Social Links
+.header-social-links{
+    margin-right: 40px;
+    a{
+        --header-social-icon-size: 30px;
+        font-size: 1.3em;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--header-social-icon-size);
+        height: var(--header-social-icon-size);        
+    }
+}
+
+// Header Toggle
+.header-toggle {
+
+    & button {
+        background: none;
+        border: 0;
+        padding: 0;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        &.desktop-trigger {
+            @media #{$tablet-device}{
+                display: none;
+            }
+        }
+        &.mobile-trigger {
+            display: none;
+            @media #{$tablet-device}{
+                display: inline-flex;
+            }
+        }
+        &:hover{
+            
+            span:first-child {
+                transform: translateY(5px);
+            }
+            span:last-child {
+                transform: translateY(-5px);
+            }
+        }
+        &.active{
+            span:first-child {
+                transform:translateY(13px) rotate(45deg);
+                visibility: visible !important;
+            }
+            span:nth-child(2) {
+                visibility: none;
+                opacity: 0;
+            }
+            span:last-child {
+                transform:translateY(-13px) rotate(-45deg);
+                visibility: visible !important;
+            }
+        }
+
+        & span {
+            width: 40px;
+            height: 3px;
+            background: $black;
+            display: block;
+            transition: $transition-default;
+        }
+    }
+}
+
+// Header Sticky
+// .sticky-fixed {
+//     position: fixed;
+//     animation: sticky 1s;
+//     .header-top {
+//         box-shadow: 0px 0px 16px 0px rgba($black, 0.07);    
+//     }
+// }
+
+// @keyframes sticky {
+//     0% {
+//         transform: translateY(-100%);
+//     }
+//     100% {
+//         transform: translateY(0%);
+//     }
+// }
+
+
+/********************* Sticky Menu
+***********************************************************************/
+.sticky-fixed {
+    position: fixed;
+    top: var(--sticky-menu-top, 0);
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    transition: all 0.2s ease-in-out;
+    -webkit-animation-name: header_animation;
+    animation-name: header_animation;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: false;
+    animation-delay: false;
+  }
+  .sticky-fixed.sticky-menu {
+    --sticky-menu-top: -6rem;
+  }
+  @-webkit-keyframes header_animation {
+    0% {
+      -webkit-transform: translate3d(0, -70px, 0);
+      transform: translate3d(0, -70px, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes header_animation {
+    0% {
+      -webkit-transform: translate3d(0, -70px, 0);
+      transform: translate3d(0, -70px, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
