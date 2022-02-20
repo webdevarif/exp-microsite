@@ -31,30 +31,8 @@
     }
 }
 .footer-top__info{
-    font-size: 22px;
-    
-    li{
-        margin: 0;
-
-        &:not(:last-child){
-            padding-right: 15px;
-        }
-
-        &:not(:first-child){
-            position: relative;
-            padding-left: 15px;
-            
-            &:before{
-                content: "";
-                position: absolute;
-                width: 2px;
-                height: 20px;
-                background: rgba($white, 0.5);
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
+    @include media-breakpoint-up(xl){
+        font-size: 22px;
     }
 }
 

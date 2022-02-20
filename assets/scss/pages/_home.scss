@@ -7,10 +7,45 @@
         background-size: cover;
         background-repeat: no-repeat;
         padding: 100px 0;
-        height: calc(100vh - 90px);
+        min-height: calc(100vh - 90px);
+        filter: sepia(100%);
+        transition: all 1s linear;
+        transition-delay: 1s;
+    }
+    .swiper-slide-active .single-slider{
+        filter: sepia(0%);
+
     }
 }
 
+
+// SOLD RECENTLY
+.sold-container{
+    .swiper-slide{
+        background: $gray-100;
+        position: relative;
+
+        &.swiper-slide-active{
+            box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !important;
+            border: 1px solid rgba($black, 0.05);
+        }
+        
+        &:not(.swiper-slide-active){
+            filter: blur(1px);
+            transform: scale(0.90);
+            pointer-events: none;
+        }
+    }
+    .swiper-slider__banner{
+        &, img{
+            height: 100%;
+            width: 100%;
+        }
+        img{
+            object-fit: cover;
+        }
+    }
+}
 // VIDEO VAULT AREA
 .video-vault-area {
 
@@ -90,7 +125,8 @@
     }
 
     .swiper-slide:not(.swiper-slide-active){
-        filter: blur(1px);
+        filter: blur(3px);
         transform: translateY(20px);
+        pointer-events: none;
     }
 }

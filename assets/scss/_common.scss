@@ -188,7 +188,6 @@ input, textaArifArea {
         font-weight: 700;
         color: $primary;
         position: relative;
-        padding-left: 15px;
     }
     .title:before{
         content: "";
@@ -206,19 +205,27 @@ input, textaArifArea {
 
 /*--Swiper Pagination--*/
 .swiper-pagination{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
     & .swiper-pagination-bullet {
         border-radius: 50%;
         background-color: #e1e1e1;
-        width: 13px;
-        height: 13px;
+        width: var(--swiper-pagination-bullet-size, 8px);
+        height: var(--swiper-pagination-bullet-size, 8px);
         transition: $transition-base;
         opacity: 1;
           
         &.swiper-pagination-bullet-active{
-            background-color: $primary;
+            background-color: var(--pg-active-color, $primary);
+            --swiper-pagination-bullet-size: 13px;
         }
     }
 }
+
+.w-2{width: 2px !important}    
+.h-2{height: 2px !important;}
 
 
 .input-group{

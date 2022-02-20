@@ -63,17 +63,27 @@
             <!-- Header Wrapper Start  -->
             <div class="header-top">
                 <div class="container">
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-wrap flex-xl-nowrap align-items-center justify-content-between">
                         <!-- Header Logo Start -->
                         <div class="header-logo">
                             <a href="index.html"><img src="assets/images/Header/logo.png" alt=""></a>
                         </div>
                         <!-- Header Logo End -->
 
+                        <!-- Header Toggle Start -->
+                        <div class="header-toggle d-inline-flex d-xl-none">
+                            <button class="mobile-trigger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <!-- Header Toggle End -->
+
                         <!-- Header Right Start -->
-                        <div class="header-right-bar w-100 d-flex justify-content-end align-items-center">
+                        <div class="mt-4 mb-xl-0 header-right-bar">
                             <!-- Header Contact Info Start-->
-                            <div class="header-contact-info d-flex align-items-center gap-5">
+                            <div class="header-contact-info d-flex flex-wrap align-items-center gap-4 gap-xl-5">
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><a href="#">lianaloporto-browne@exp.uk.com</a></li>
                                     <li class="list-inline-item"><a href="#">07460 088 110</a></li>
@@ -85,24 +95,20 @@
                                 </ul>
                             </div>
                             <!-- Header Contact Info End-->
-                            <!-- Header Toggle Start -->
-                            <div class="header-toggle d-inline-flex">
-                                <button class="mobile-trigger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        <!-- Header Toggle End -->
                         </div>
                     </div>
                     <!-- Header Right End -->
                 </div>
             </div>
-            <div class="header-navbar">
-                <div class="container">
+            <div class="navbar navbar-expand-lg d-none d-lg-block">
+                <div class="container">            
+                    <!-- Header Logo Start -->
+                    <div class="header-logo">
+                        <a href="index.html"><img src="assets/images/Header/logo.png" alt=""></a>
+                    </div>
+                    <!-- Header Logo End -->
                     <!-- Header Menu Start -->
-                    <nav class="header-navigation">
+                    <nav class="header-navigation w-100">
                         <ul class="main-menu justify-content-end">
                             <li class="dropdown-icon">
                                 <a href="index.html">Properties</a>
@@ -174,28 +180,75 @@
     <!--// ==============================================================
             Hero Area Start  
         ================================================================// -->
-        <section class="swiper-container hero-area banner-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner.jpg">
-                        <div class="single-slider__content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h1 class="text-white">Delivering exceptional property <br>advice throughtout North West London</h1>
+        <section class="hero-area">
+            <div class="swiper hero-container position-relative" style="--pg-active-color: #fff">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner.jpg)">
+                            <div class="single-slider__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="text-white" data-aos="fade-up" data-aos-delay="1000">Delivering exceptional property <br>advice throughtout North West London</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner-2.jpg)">
+                            <div class="single-slider__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="text-white">Delivering exceptional property <br>advice throughtout North West London</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner.jpg)">
+                            <div class="single-slider__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="text-white">Delivering exceptional property <br>advice throughtout North West London</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner-2.jpg)">
+                            <div class="single-slider__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="text-white">Delivering exceptional property <br>advice throughtout North West London</h1>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
             <div class="hero-area__announce bg-primary py-4">
                 <div class="continer">
                     <div class="row">
                         <div class="col-12">
                             <div class="text-center">
-                                <p class="fw-normal fs-4 text-white-50"><strong class="text-white">Free</strong> instant online valuation in just <strong class="text-white">60 Seconds</strong> <button class="btn btn-rounded ms-3 btn-outline-light">Get Started</button></p>
+                                <p class="fw-normal fs-4 text-white-50"><strong class="text-white">Free</strong> instant online valuation in just <strong class="text-white">60 Seconds</strong> 
+                                <button class="ms-3 btn-outline btn-outline--light">
+                                    <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg> 
+                                    Get Started
+                                </button></p>
                             </div>
                         </div>
                     </div>
@@ -211,25 +264,29 @@
         ================================================================// -->
         <section class="section-padding about-area">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row gy-5 align-items-center">
                     <div class="col-lg-6">
+                        <div class="about-area__banner">
+                            <img src="assets/images/About/banner.jpg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-first">
                         <div class="about-area__content">
-                            <div class="section-title mb-4">
-                                <h2 class="title">About me</h2>
+                            <div class="section-title d-flex gap-4">
+                                <div class="vr bg-primary"></div>
+                                <h2 class="heading" data-aos="fade-up" data-aos-delay="1000">About me</h2>
                             </div>
                             <div class="about-area__content-inner fs-lg">
                                 <p class="mb-3">With over 22 years experience in the property industry, I've worked in both corporate and boutique agencies.</p>
                                 <p class="mb-3">Starting my career at the largest real estate company in my native Malta and then relocating to England to learn the unique London market with one of the leading corporate agencies.</p>
                                 <p class="mb-3">What was intended to be a sabbatical turned into a permanent stay, with over a decade working as Sales and Operational Director at an independent agency in North West London.</p>
                                 <div class="my-5 mb-lg-0 button-area">
-                                    <button class="btn btn-rounded btn-outline-primary">Find out more</button>
+                                    <button class="btn-outline btn-outline--primary">
+                                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg> 
+                                        Find out more
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-area__banner">
-                            <img src="assets/images/About/banner.jpg" class="img-fluid" alt="" />
                         </div>
                     </div>
                 </div>
@@ -241,7 +298,7 @@
     <!--// ==============================================================
             Start Consultation Section
         ================================================================// -->
-        <section class="consultation-area bg-primary section-padding" style="background-image: url(assets/images/Homepage/request-free-consultation-background.jpg">
+        <section class="consultation-area bg-primary section-padding" style="background-image: url('assets/images/Homepage/request-free-consultation-background.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -264,7 +321,7 @@
         ================================================================// -->
         <section class="section-padding about-area">
             <div class="container">
-                <div class="row">
+                <div class="row gy-5">
                     <div class="col-lg-6">
                         <div class="about-area__banner">
                             <img src="assets/images/About/Intersection.jpg" class="img-fluid" alt="" />
@@ -273,7 +330,9 @@
                     <div class="col-lg-6">
                         <div class="about-area__content">
                             <div class="section-title mb-4">
-                                <h2 class="title">Why choose Liana Loporto
+                                <div class="section-title d-flex gap-4 mb-4">
+                                <div class="vr bg-primary"></div>
+                                <h2 class="heading">Why choose Liana Loporto
                                     MNAEA?</h2>
                             </div>
                             <div class="about-area__content-inner fs-lg">
@@ -282,7 +341,10 @@
                                 <p class="mb-3">After that, I’ll prepare the details and photos and add your property on Rightmove & Zoopla as well as tap into my mailing list of buyers to help you to secure a buyer at the best price possible. I’ll help you with booking viewings, negotiating offers to maximise your price and, as you’d expect from a personal estate agent, we’ll help with seeing the sale all the way through, to the day you hand over the keys.</p>
                                 <p class="mb-3">We sell all types of property, and because I’m powered by eXp UK, I don’t have to worry about the technology or property portals, allowing me to concentrate on what I do best, which is to sell houses. </p>
                                 <div class="my-5 mb-lg-0 button-area">
-                                    <button class="btn btn-rounded btn-outline-primary">View Testimonials</button>
+                                    <button class="ms-3 btn-outline btn-outline--primary">
+                                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg> 
+                                        View Testimonials
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -394,9 +456,237 @@
         </section>
         <!-- // END SEARCH PROPERTIES  -->
 
-        <!-- start rating area  -->
-        <section class="section-padding vh-100"></section>
-        <!-- end rating area  -->
+        <!-- // START SOLD RECENTLY  -->
+        <section class="section-padding-02 sold-recently">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center section-title mb-5">
+                            <div class="heading">Sold Recently</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- Slider main container -->
+                        <div class="swiper sold-container position-relative">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/sold/sold-recently.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-body swiper-slider__content">
+                                                <div class="price-availity mb-3">
+                                                    <span class="badge bg-danger text-uppercase px-3">Sold</span>
+                                                </div>
+                                                <div class="section-title d-flex gap-3 mb-5">
+                                                    <div class="vr bg-warning w-2"></div>
+                                                    <h2 class="heading">Heber Road London, NW2 6AA</h2>
+                                                </div>
+                                                <p class="text-primary">4 bedroom tarraced</p>
+                                                <p class="text-primary">$1,500</p>
+                                                <hr class="bg-warning h-2">
+
+                                                <!-- Author Details -->
+                                                <div class="author__details mb-4 d-flex align-items-center">
+                                                    <div class="author__thumb avatar size-70 rounded-circle overflow-hidden me-4">
+                                                        <img src="https://via.placeholder.com/400x200" alt="">
+                                                    </div>
+                                                    <div class="author__info text-primary">
+                                                        <h5 class="mb-1 text-primary">Contact Liana Loporto</h5>
+                                                        <p>lianaloporto.co.uk</p>
+                                                        <p>07460 088 110</p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-area d-flex gap-3">
+                                                    <button class="btn-outline btn-outline--primary">
+                                                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg> 
+                                                        Request a Consultation
+                                                    </button>
+                                                    <button class="btn-outline btn-outline--primary">
+                                                        <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg> 
+                                                        Request a Call Back
+                                                    </button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Consultation</button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Call Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/sold/sold-recently.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-body swiper-slider__content">
+                                                <div class="price-availity mb-3">
+                                                    <span class="badge bg-danger text-uppercase px-3">Sold</span>
+                                                </div>
+                                                <div class="section-title d-flex gap-3 mb-5">
+                                                    <div class="vr bg-warning w-2"></div>
+                                                    <h2 class="heading">Heber Road London, NW2 6AA</h2>
+                                                </div>
+                                                <p class="text-primary">4 bedroom tarraced</p>
+                                                <p class="text-primary">$1,500</p>
+                                                <hr class="bg-warning h-2">
+
+                                                <!-- Author Details -->
+                                                <div class="author__details mb-4 d-flex align-items-center">
+                                                    <div class="author__thumb avatar size-70 rounded-circle overflow-hidden me-4">
+                                                        <img src="https://via.placeholder.com/400x200" alt="">
+                                                    </div>
+                                                    <div class="author__info text-primary">
+                                                        <h5 class="mb-1 text-primary">Contact Liana Loporto</h5>
+                                                        <p>lianaloporto.co.uk</p>
+                                                        <p>07460 088 110</p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-area d-flex gap-3">
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Consultation</button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Call Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/sold/sold-recently.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-body swiper-slider__content">
+                                                <div class="price-availity mb-3">
+                                                    <span class="badge bg-danger text-uppercase px-3">Sold</span>
+                                                </div>
+                                                <div class="section-title d-flex gap-3 mb-5">
+                                                    <div class="vr bg-warning w-2"></div>
+                                                    <h2 class="heading">Heber Road London, NW2 6AA</h2>
+                                                </div>
+                                                <p class="text-primary">4 bedroom tarraced</p>
+                                                <p class="text-primary">$1,500</p>
+                                                <hr class="bg-warning h-2">
+
+                                                <!-- Author Details -->
+                                                <div class="author__details mb-4 d-flex align-items-center">
+                                                    <div class="author__thumb avatar size-70 rounded-circle overflow-hidden me-4">
+                                                        <img src="https://via.placeholder.com/400x200" alt="">
+                                                    </div>
+                                                    <div class="author__info text-primary">
+                                                        <h5 class="mb-1 text-primary">Contact Liana Loporto</h5>
+                                                        <p>lianaloporto.co.uk</p>
+                                                        <p>07460 088 110</p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-area d-flex gap-3">
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Consultation</button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Call Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/sold/sold-recently.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-body swiper-slider__content">
+                                                <div class="price-availity mb-3">
+                                                    <span class="badge bg-danger text-uppercase px-3">Sold</span>
+                                                </div>
+                                                <div class="section-title d-flex gap-3 mb-5">
+                                                    <div class="vr bg-warning w-2"></div>
+                                                    <h2 class="heading">Heber Road London, NW2 6AA</h2>
+                                                </div>
+                                                <p class="text-primary">4 bedroom tarraced</p>
+                                                <p class="text-primary">$1,500</p>
+                                                <hr class="bg-warning h-2">
+
+                                                <!-- Author Details -->
+                                                <div class="author__details mb-4 d-flex align-items-center">
+                                                    <div class="author__thumb avatar size-70 rounded-circle overflow-hidden me-4">
+                                                        <img src="https://via.placeholder.com/400x200" alt="">
+                                                    </div>
+                                                    <div class="author__info text-primary">
+                                                        <h5 class="mb-1 text-primary">Contact Liana Loporto</h5>
+                                                        <p>lianaloporto.co.uk</p>
+                                                        <p>07460 088 110</p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-area d-flex gap-3">
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Consultation</button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Call Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/sold/sold-recently.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card-body swiper-slider__content">
+                                                <div class="price-availity mb-3">
+                                                    <span class="badge bg-danger text-uppercase px-3">Sold</span>
+                                                </div>
+                                                <div class="section-title d-flex gap-3 mb-5">
+                                                    <div class="vr bg-warning w-2"></div>
+                                                    <h2 class="heading">Heber Road London, NW2 6AA</h2>
+                                                </div>
+                                                <p class="text-primary">4 bedroom tarraced</p>
+                                                <p class="text-primary">$1,500</p>
+                                                <hr class="bg-warning h-2">
+
+                                                <!-- Author Details -->
+                                                <div class="author__details mb-4 d-flex align-items-center">
+                                                    <div class="author__thumb avatar size-70 rounded-circle overflow-hidden me-4">
+                                                        <img src="https://via.placeholder.com/400x200" alt="">
+                                                    </div>
+                                                    <div class="author__info text-primary">
+                                                        <h5 class="mb-1 text-primary">Contact Liana Loporto</h5>
+                                                        <p>lianaloporto.co.uk</p>
+                                                        <p>07460 088 110</p>
+                                                    </div>
+                                                </div>
+                                                <div class="button-area d-flex gap-3">
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Consultation</button>
+                                                    <button class="btn btn-sm btn-rounded btn-outline-primary">Request a Call Back</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination bottom-0 position-relative mt-5"></div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // END SOLD RECENTLY  -->
 
         <!-- // START AREA GUIDES  -->
         <section class="section-padding area-guide bg-primary">
@@ -412,7 +702,7 @@
                     <div class="col-xl-10 col-lg-12">
                         <div class="area-guide-wrapper">
                             <!-- Slider main container -->
-                            <div class="swiper guide-container">
+                            <div class="swiper guide-container position-relative">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -424,7 +714,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
-                                            <div class="p-lg-4 swiper-slider__content">
+                                            <div class="card-body swiper-slider__content">
                                                 <div class="section-title mb-4">
                                                     <h2 class="heading">London, NW2</h2>
                                                 </div>
@@ -438,13 +728,6 @@
                                 </div>
                                 <!-- If we need pagination -->
                                 <div class="swiper-pagination"></div>
-                            
-                                <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            
-                                <!-- If we need scrollbar -->
-                                <div class="swiper-scrollbar"></div>
                             </div>
                         </div>
                     </div>
@@ -458,8 +741,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="section-title mb-5">
-                            <h2 class="title">Liana Loporto Video Vault</h2>
+                        <div class="section-title d-flex gap-4 mb-5">
+                            <div class="vr bg-primary"></div>
+                            <h2 class="heading">Liana Loporto Video Vault</h2>
                         </div>
                     </div>
                 </div>
@@ -531,8 +815,9 @@
                 <div class="row gy-5 align-items-center">
                     <div class="col-lg-6">
                         <div class="content-area">
-                            <div class="section-title mb-4">
-                                <h2 class="text-white title">Follow me on social media</h2>
+                            <div class="section-title d-flex gap-4 mb-4">
+                                <div class="vr bg-white"></div>
+                                <h2 class="text-white heading">Follow me on social media</h2>
                             </div>
                             <div class="content-box mb-5">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus sodales tellus faucibus, vel mollis nunc volutpat. Nulla scelerisque ante lectus, vitae semper ipsum interdum quis. Vivamus a laoreet.</p>
@@ -753,7 +1038,7 @@
         <footer class="footer-section">
             <div class="footer-top">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row gy-4 align-items-center">
                         <div class="col-lg-4">
                             <div class="footer-top__brand d-flex gap-4 align-items-center">
                                 <div class="single-brand">
@@ -769,8 +1054,9 @@
                         </div>
                         <div class="col-lg-8 text-lg-end">
                             <div class="footer-top__info">
-                                <ul class="list-inline">
+                                <ul class="hstack flex-wrap gap-3 justify-content-lg-end list-inline">
                                     <li class="list-inline-item"><a href="#">07460 088 110</a></li>
+                                    <li class="vr"></li>
                                     <li class="list-inline-item"><a href="#">liana.loporto-browne@exp.uk.com</a></li>
                                 </ul>
                             </div>
@@ -793,7 +1079,7 @@
                             </div>
                         </div>
                         <div class="col-lg-5">
-                            <div class="social-follow text-end">
+                            <div class="social-follow text-xl-end">
                                 <h6 class="text-white mb-3">Follow me on:</h6>
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -835,6 +1121,7 @@
     <!-- Plugins JS -->
     <script src="assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="assets/js/plugins/aos.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
     <script src="assets/js/plugins/simpleParallax.min.js"></script>
     <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/plugins/jquery.nice-select.min.js"></script>

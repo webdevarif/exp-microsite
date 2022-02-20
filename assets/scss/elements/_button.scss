@@ -5,4 +5,60 @@
     &-rounded{
         border-radius: 0.5rem 0 0.5rem 0;
     }
+
+    &-outline{
+        outline: none;
+        border: 0;
+        color: var(--outline-btn-color, currentColor);
+        cursor: pointer;
+        font-size:16px;
+        font-weight: 400;
+        line-height: 45px;
+        max-width: 180px; 
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%; 
+        background: transparent;
+        font-weight: 100;
+
+        svg {
+            height: 45px;
+            left: 0;
+            position: absolute;
+            top: 0; 
+            width: 100%; 
+          }
+          
+          rect {
+            fill: none;
+            stroke: var(--outline-btn-color, currentColor);
+            stroke-width: 2;
+            stroke-dasharray: 422, 0;
+            transition: all 0.35s linear;
+          }
+
+          &:hover{
+            background: var(--outline-btn-bg, rgba($primary, 0));
+            font-weight: 900;
+            letter-spacing: 1px;
+            
+            rect {
+                stroke-width: 5;
+                stroke-dasharray: 15, 310;
+                stroke-dashoffset: 48;
+                transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+        }
+    }
+    
+    &-outline--light{
+        --outline-btn-color: #{$white};
+        --outline-btn-bg: rgba($primary, 0);
+    }
+
+    &-outline--primary{
+        --outline-btn-color: #{$primary};
+        --outline-btn-bg: rgba($primary, 0);
+    }
 }

@@ -9,17 +9,44 @@
     width: 100%; top: 0;
     left: 0; right: 0;
 
+    &:not(.sticky-fixed){
+        .header-top{
+            padding-top: 3rem;
+        }            
+        .navbar .header-logo{
+            display: none;
+        }
+    }
+    
+
     &-top{
         width: 100%;
         color: $black;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
 
         @include media-breakpoint-up(lg){
-            padding-top: var(--header-padding-top, 3.75rem);
+            padding-top: var(--header-padding-top, 0.75rem);
             padding-bottom: 0.75rem;
         }
     }
+    .header-right-bar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    @include media-breakpoint-down(lg){
+        &.sticky-fixed .header-right-bar{
+            display: none;
+        }   
+    }
 }
 
+.header-logo img{
+    height: 33px;
+}
 
 // Header Navigation
 .header-navigation {
@@ -36,9 +63,8 @@
                 color: var(--menu-link-color, $gray-300);
             }
 
-            &.active-menu, 
-            &:hover {
-                --menu-link-color: var(--sticky-color, #{$white});
+            &.active-menu, &:hover {
+                --menu-link-color: #{$white};
             }
             &:hover .sub-menu {
                 opacity: 1;
@@ -162,14 +188,7 @@
         display: inline-flex;
         flex-direction: column;
         gap: 10px;
-        &.desktop-trigger {
-            // @media #{$tablet-device}{
-            //     display: none;
-            // }
-        }
-        &.mobile-trigger {
-            display: none;
-        }
+
         &:hover{
             
             span:first-child {
@@ -195,9 +214,9 @@
         }
 
         & span {
-            width: 40px;
+            width: 35px;
             height: 3px;
-            background: $black;
+            background: $white;
             display: block;
             transition: $transition-base;
         }
@@ -240,23 +259,27 @@
     right: 0;
     background: $primary;
     z-index: 999;
-    transition: all 0.2s ease-in-out;
     -webkit-animation-name: header_animation;
-    animation-name: header_animation;
+            animation-name: header_animation;
     -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
+            animation-duration: 0.4s;
     -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+            animation-iteration-count: 1;
     -webkit-animation-delay: false;
-    animation-delay: false;
+            animation-delay: false;
     box-shadow: 0px 0px 16px 0px rgba($black, 0.07);
+
     
     .header-navbar{
         background-color: $white;
     }
-    
+    .header-top{
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+    }
     &.sticky-menu {
-      --sticky-menu-top: -3rem;
+        --sticky-menu-top: 0;
     }
   }
 
@@ -270,6 +293,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
+  
   @keyframes header_animation {
     0% {
       -webkit-transform: translate3d(0, -70px, 0);
@@ -280,6 +304,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
+  
   
 
 

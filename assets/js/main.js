@@ -1,6 +1,38 @@
     "use strict";
 
+      
+	$(window).on('load', function () {
+		aosAnimation();
+		wowAnimation();
+	});
 
+	/*=============================================
+		=    		 Aos Active  	         =
+	=============================================*/
+	function aosAnimation() {
+		AOS.init({
+			duration: 1000,
+			mirror: true,
+			once: true,
+			disable: 'mobile',
+		});
+	}
+
+	/*=============================================
+		=    		 Wow Active  	         =
+	=============================================*/
+	function wowAnimation() {
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: false,
+			live: true
+		});
+		wow.init();
+	}
+
+    
     /*--
         preloader
     -----------------------------------*/
@@ -67,7 +99,7 @@
 
     var header = document.getElementById('header-sticky');
     var toggled;
-    var threshold = 150;
+    var threshold = 380;
 
     var checkScroll = function() {
     curScroll = w.scrollY || doc.scrollTop;
@@ -260,18 +292,33 @@
     /*--
         banner slider
 	-----------------------------------*/
-    var autoplay = 5000;
-    var swiper = new Swiper('.banner-slider', {
-        slidesPerView: 1,
-        loop: true,
-        speed: 800,
-        lazy: true,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
+    var swiper = new Swiper('.hero-container', {
+        pagination: {
+            el: ".hero-container .swiper-pagination",
         },
-        autoplay: true,
-
+        loop: true,
+        grabCursor: true,
+        speed: 1000,
+        paginationClickable: true,
+        parallax: true,
+        autoplay: false,
+        effect: 'fade',
+        // fadeEffect: {
+        //     crossFade: true
+        // },
+        // autoplayDisableOnInteraction: false,
+        // loop: true,
+        // onSlideChangeStart: function (s) {
+        //     var currentSlide = $(s.slides[s.activeIndex]);
+        //     currentSlide.find('#swipeLeft').removeClass('animated slideInLeft');
+        //     currentSlide.find('#swipeRight').removeClass('animated slideInRight');
+            
+        // },
+        // onSlideChangeEnd: function (s) {
+        //     var currentSlide = $(s.slides[s.activeIndex]);
+        //     currentSlide.find('#swipeLeft').addClass('animated slideInLeft');
+        //     currentSlide.find('#swipeRight').addClass('animated slideInRight');      
+        // }
     });
 
     /*--
@@ -289,6 +336,32 @@
         },
         autoplay: true,
 
+    });
+
+   /*--
+    Slider Active
+	-----------------------------------*/
+    var autoplay = 5000;
+    var swiper = new Swiper('.sold-container', {
+        slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
+        loop: true,
+        slideToClickedSlide: true,
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            1399: {
+              slidesPerView: 2,
+            },
+        },
+        pagination: {
+            el: ".sold-container .swiper-pagination",
+        },
+        fadeEffect: {
+            crossFade: true,
+        },
     });
 
    /*--
