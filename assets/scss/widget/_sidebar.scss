@@ -6,17 +6,17 @@
 .sidebar-wrap {
     border-left: 1px solid #eeeeee;
     height: 100%;
-    @media #{$tablet-device, $large-mobile} {
-        border-left: none;
-        height: auto;
-        padding-top: 0;
-    }
+    // @media #{$tablet-device, $large-mobile} {
+    //     border-left: none;
+    //     height: auto;
+    //     padding-top: 0;
+    // }
 }
 
 // Widget
 .widget {
     margin-bottom: 40px;
-    color: $body-color;
+    color: $gray-600;
     &:last-child {
         margin-bottom: 0;
     }
@@ -24,9 +24,9 @@
 		border-bottom: 1px solid #eeeeee;
 		padding-left: 20px;
 		padding-bottom: 20px;
-		@media #{$tablet-device, $large-mobile} {
-			padding-left: 0;
-		}
+		// @media #{$tablet-device, $large-mobile} {
+		// 	padding-left: 0;
+		// }
 	}
 }
 

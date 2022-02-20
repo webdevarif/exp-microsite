@@ -15,7 +15,7 @@
 	============================================ -->
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/all.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/plugins/flaticon.css">
 
     <!-- Plugins CSS -->
@@ -66,7 +66,7 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="https://via.placeholder.com/130x40" alt=""></a>
+                            <a href="index.html"><img src="assets/images/Header/logo.png" alt=""></a>
                         </div>
                         <!-- Header Logo End -->
 
@@ -78,7 +78,7 @@
                                     <li class="list-inline-item"><a href="#">lianaloporto-browne@exp.uk.com</a></li>
                                     <li class="list-inline-item"><a href="#">07460 088 110</a></li>
                                 </ul>
-                                <ul class="list-inline">
+                                <ul class="list-inline social-links">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -104,10 +104,8 @@
                     <!-- Header Menu Start -->
                     <nav class="header-navigation">
                         <ul class="main-menu justify-content-end">
-                            <li><a href="#">REGISTER</a></li>
-                            <li><a href="#">SAVED PROPERTIES</a></li>
-                            <li class="active-menu dropdown-icon">
-                                <a href="index.html">NEW BUILD</a>
+                            <li class="dropdown-icon">
+                                <a href="index.html">Properties</a>
                                 <ul class="sub-menu">
                                     <li class="active"><a href="index.html">Property 01</a></li>
                                     <li><a href="index-2.html">Property 02</a></li>
@@ -115,9 +113,18 @@
                                     <li><a href="#">Property 04</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">SALES</a></li>
-                            <li><a href="#">REVIEWS</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li class="active-menu dropdown-icon">
+                                <a href="index.html">Area Guides</a>
+                                <ul class="sub-menu">
+                                    <li class="active"><a href="index.html">Property 01</a></li>
+                                    <li><a href="index-2.html">Property 02</a></li>
+                                    <li><a href="index-3.html">Property 03</a></li>
+                                    <li><a href="#">Property 04</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Join eXp</a></li>
                         </ul>
                     </nav>
                 <!-- Header Wrapper End  -->
@@ -128,7 +135,6 @@
     <!--// ==============================================================
             Header End  
         ================================================================// -->
-
         <!-- Offcanvas Start -->
         <div class="offcanvas offcanvas-start" id="offcanvasMenu">
 
@@ -165,176 +171,220 @@
             </div>
         </div>
         <!-- Offcanvas End -->
-
-        <!-- start banner area  -->
-        <section class="banner-area">
-            <!-- Swiper Slider -->
-            <div class="swiper-container banner-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="banner-single-slider" style="background-image: url(assets/images/bg/banner-image1.jpg);"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-single-slider" style="background-image: url(assets/images/bg/banner-image2.jpg);"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-single-slider" style="background-image: url(assets/images/bg/banner-image3.jpg);"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-single-slider" style="background-image: url(assets/images/bg/banner-image4.jpg);"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="banner-single-slider" style="background-image: url(assets/images/bg/banner-image5.jpg);"></div>
+    <!--// ==============================================================
+            Hero Area Start  
+        ================================================================// -->
+        <section class="swiper-container hero-area banner-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="single-slider d-flex flex-column justify-content-center" style="background-image: url(assets/images/Homepage/hero-banner.jpg">
+                        <div class="single-slider__content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h1 class="text-white">Delivering exceptional property <br>advice throughtout North West London</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="hero-area__announce bg-primary py-4">
+                <div class="continer">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <p class="fw-normal fs-4 text-white-50"><strong class="text-white">Free</strong> instant online valuation in just <strong class="text-white">60 Seconds</strong> <button class="btn btn-rounded ms-3 btn-outline-light">Get Started</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--// ==============================================================
+            Hero Area End
+        ================================================================// -->
+
+    <!--// ==============================================================
+            Start About Section
+        ================================================================// -->
+        <section class="section-padding about-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-area__content">
+                            <div class="section-title mb-4">
+                                <h2 class="title">About me</h2>
+                            </div>
+                            <div class="about-area__content-inner fs-lg">
+                                <p class="mb-3">With over 22 years experience in the property industry, I've worked in both corporate and boutique agencies.</p>
+                                <p class="mb-3">Starting my career at the largest real estate company in my native Malta and then relocating to England to learn the unique London market with one of the leading corporate agencies.</p>
+                                <p class="mb-3">What was intended to be a sabbatical turned into a permanent stay, with over a decade working as Sales and Operational Director at an independent agency in North West London.</p>
+                                <div class="my-5 mb-lg-0 button-area">
+                                    <button class="btn btn-rounded btn-outline-primary">Find out more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-area__banner">
+                            <img src="assets/images/About/banner.jpg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--// ==============================================================
+            End About Section
+        ================================================================// -->
+    <!--// ==============================================================
+            Start Consultation Section
+        ================================================================// -->
+        <section class="consultation-area bg-primary section-padding" style="background-image: url(assets/images/Homepage/request-free-consultation-background.jpg">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5 offset-xl-7">
-                        <div class="search-form-wrap">
-                            <form action="">
-                                <div class="form-group">
-                                    <select>
-                                        <option selected value>Location</option>
-                                        <option value="47">Acklam</option>
-                                        <option value="55">Acklington</option>
-                                        <option value="4">Alnwick</option>
-                                        <option value="17">Backworth</option>
-                                        <option value="51">Bedlington</option>
-                                        <option value="33">Bensham</option>
-                                        <option value="53">Blakelaw</option>
-                                        <option value="27">Blaydon</option>
-                                        <option value="60">Brunton Bridge</option>
-                                        <option value="25">Burnopfield</option>
-                                        <option value="18">Chester Le Street</option>
-                                        <option value="35">Choppington</option>
-                                        <option value="56">Chopwell</option>
-                                        <option value="15">Christon Bank (Alnwick)</option>
-                                        <option value="42">Cramlington</option>
-                                        <option value="37">Denton Burn</option>
-                                        <option value="29">Dunston</option>
-                                        <option value="9">Durham City Centre</option>
-                                        <option value="20">Forest Hall</option>
-                                        <option value="39">Forest Hall</option>
-                                        <option value="8">Gateshead</option>
-                                        <option value="57">Guyzance</option>
-                                        <option value="6">Hartlepool</option>
-                                        <option value="41">Houghton Le Spring</option>
-                                        <option value="59">Kenton Bank Foot</option>
-                                        <option value="62">Lamesley</option>
-                                        <option value="43">Lemington</option>
-                                        <option value="31">Lobley Hill</option>
-                                        <option value="16">Longhoughton</option>
-                                        <option value="10">Morpeth</option>
-                                        <option value="46">Newbiggin-By-The-Sea</option>
-                                        <option value="5">Newcastle Upon Tyne</option>
-                                        <option value="21">North Shields</option>
-                                        <option value="14">Otterburn</option>
-                                        <option value="19">Ouston</option>
-                                        <option value="11">Ponteland</option>
-                                        <option value="13">Rothbury</option>
-                                        <option value="30">Rowlands Gill</option>
-                                        <option value="26">Rowlands Gill</option>
-                                        <option value="52">Ryton</option>
-                                        <option value="50">Scotswood</option>
-                                        <option value="48">Seaham</option>
-                                        <option value="12">Stannington (Morpeth)</option>
-                                        <option value="61">Stapleton, Darlington</option>
-                                        <option value="32">Teams (Gateshead)</option>
-                                        <option value="58">Throckley</option>
-                                        <option value="45">Ushaw Moor</option>
-                                        <option value="23">Wallsend</option>
-                                        <option value="54">Warkworth</option>
-                                        <option value="40">Washington</option>
-                                        <option value="44">West Allotment</option>
-                                        <option value="38">Wheatley Hill</option>
-                                        <option value="24">Whickham</option>
-                                        <option value="22">Whitley Bay</option>
-                                        <option value="36">Winlaton Mill</option>
-                                        <option value="49">Wooler</option>
-                                        <option value="34">Wynyard</option>
-                                    </select>                                 
+                    <div class="col-lg-12">
+                        <div class="consultation-area__content text-center">
+                            <h1 class="text-white mb-5">Request a <u>FREE</u> property consultation <br> with Liana Loporto MNAEA</h1>
+                            <div class="button-area">
+                                <button class="btn btn-rounded btn-warning">Request Consultation</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--// ==============================================================
+            End Consultation Section
+        ================================================================// -->
+
+    <!--// ==============================================================
+            Start Why Choose Section
+        ================================================================// -->
+        <section class="section-padding about-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-area__banner">
+                            <img src="assets/images/About/Intersection.jpg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-area__content">
+                            <div class="section-title mb-4">
+                                <h2 class="title">Why choose Liana Loporto
+                                    MNAEA?</h2>
+                            </div>
+                            <div class="about-area__content-inner fs-lg">
+                                <p class="mb-3">Selling a property can be an exciting, nervous and exhilarating experience. Whichever way it goes, I’m on hand to help you every step of the way.</p>
+                                <p class="mb-3">I’ll visit you in your property, free of charge, advise you on the best way to market your home to get the best price and help with the correct asking price, based on your own personal circumstances.</p>
+                                <p class="mb-3">After that, I’ll prepare the details and photos and add your property on Rightmove & Zoopla as well as tap into my mailing list of buyers to help you to secure a buyer at the best price possible. I’ll help you with booking viewings, negotiating offers to maximise your price and, as you’d expect from a personal estate agent, we’ll help with seeing the sale all the way through, to the day you hand over the keys.</p>
+                                <p class="mb-3">We sell all types of property, and because I’m powered by eXp UK, I don’t have to worry about the technology or property portals, allowing me to concentrate on what I do best, which is to sell houses. </p>
+                                <div class="my-5 mb-lg-0 button-area">
+                                    <button class="btn btn-rounded btn-outline-primary">View Testimonials</button>
                                 </div>
-                                <div class="form-group column2">
-                                    <select>
-                                        <option selected value>Radius</option>
-                                        <option value="1609">1 mile</option>
-                                        <option value="8045">5 miles</option>
-                                        <option value="16090">10 miles</option>
-                                        <option value="32180">20 miles</option>
-                                    </select>
-                                    <select>
-                                        <option selected="" value="">Min Beds</option>
-                                        <option value="0">Studio</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--// ==============================================================
+            End Why Choose Section
+        ================================================================// -->
+
+        <!-- // START SEARCH PROPERTIES  -->
+        <section class="section-padding-xl bg-primary text-white search-properties" style="background-image: url(assets/images/properties-for-sale/bg-banner.jpg)">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="search-properties-wrapper">
+                            <div class="section-title text-center mb-5">
+                                <h2 class="text-white heading">Search for properties in <br>
+                                    North West London</h2>
+                            </div>
+                            <form action="#">
+                                <div class="input-group mb-4">
+                                    <input type="text" class="form-control" placeholder="Enter your location e.g. postcode or town">
+                                    <button class="btn btn-warning">Search</button>
                                 </div>
-                                <div class="form-group column2">
-                                    <select>
-                                        <option value="">Min Price</option>
-                                        <option value="100000">100,000</option>
-                                        <option value="150000">150,000</option>
-                                        <option value="200000">200,000</option>
-                                        <option value="250000">250,000</option>
-                                        <option value="300000">300,000</option>
-                                        <option value="350000">350,000</option>
-                                        <option value="400000">400,000</option>
-                                        <option value="450000">450,000</option>
-                                        <option value="500000">500,000</option>
-                                        <option value="750000">750,000</option>
-                                        <option value="1000000">1,000,000</option>
-                                        <option value="1500000">1,500,000</option>
-                                        <option value="2000000">2,000,000</option>
-                                        <option value="3000000">3,000,000</option>
-                                        <option value="4000000">4,000,000</option>
-                                        <option value="5000000">5,000,000</option>
-                                        <option value="6000000">6,000,000</option>
-                                        <option value="7000000">7,000,000</option>
-                                        <option value="8000000">8,000,000</option>
-                                        <option value="9000000">9,000,000</option>
-                                        <option value="10000000">10,000,000</option>
-                                    </select>
-                                    <select>
-                                        <option value="">Max Price</option>
-                                        <option value="100000">100,000</option>
-                                        <option value="150000">150,000</option>
-                                        <option value="200000">200,000</option>
-                                        <option value="250000">250,000</option>
-                                        <option value="300000">300,000</option>
-                                        <option value="350000">350,000</option>
-                                        <option value="400000">400,000</option>
-                                        <option value="450000">450,000</option>
-                                        <option value="500000">500,000</option>
-                                        <option value="600000">600,000</option>
-                                        <option value="700000">700,000</option>
-                                        <option value="800000">800,000</option>
-                                        <option value="900000">900,000</option>
-                                        <option value="1000000">1,000,000</option>
-                                        <option value="1500000">1,500,000</option>
-                                        <option value="2000000">2,000,000</option>
-                                        <option value="2500000">2,500,000</option>
-                                        <option value="3000000">3,000,000</option>
-                                        <option value="4000000">4,000,000</option>
-                                        <option value="5000000">5,000,000</option>
-                                        <option value="6000000">6,000,000</option>
-                                        <option value="7000000">7,000,000</option>
-                                        <option value="8000000">8,000,000</option>
-                                        <option value="9000000">9,000,000</option>
-                                        <option value="10000000">10,000,000</option>
-                                    </select>  
+
+                                <div class="form-check mb-5">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Exclude under offer
+                                    </label>
                                 </div>
-                                <div class="form-group submit">
-                                    <button class="btn btn-primary">
-                                        <span class="arrow-icon">
-                                            <i class="apiary-arrow"></i>
-                                        </span>
-                                        SEARCH
-                                    </button>
+
+                                <div class="more-filter">
+                                    <div class="row g-4">
+                                        <!-- Single Filter -->
+                                        <div class="col-lg-4 col-sm-6">
+                                            <div class="single-filter">
+                                                <h5 class="mb-3 text-white">Maximum price:</h5>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-500k" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-500k">500k</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-1mil" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-1mil">1mil</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-more-than-1mil" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-more-than-1mil">1mil+</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Single Filter -->
+                                        <div class="col-lg-4 col-sm-6">
+                                            <div class="single-filter">
+                                                <h5 class="mb-3 text-white">Property Type:</h5>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-house" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-house">House</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-flat" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-flat">Flat</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-other" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-other">Other</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Single Filter -->
+                                        <div class="col-lg-4 col-sm-6">
+                                            <div class="single-filter">
+                                                <h5 class="mb-3 text-white">Minimum bedrooms:</h5>
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-min-2" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-min-2"><2</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-3" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-3">3</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-more-than-4" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-more-than-4">4</label>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <input type="checkbox" class="btn-check" id="btn-check-outlined-more-than-5" autocomplete="off">
+                                                        <label class="btn btn-sm rounded-0 px-3 btn-outline-light" for="btn-check-outlined-more-than-5">5</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </form>
                         </div>
@@ -342,411 +392,429 @@
                 </div>
             </div>
         </section>
-        <!-- end banner area  -->
-
-        <!-- start welcome area  -->
-        <section class="welcome-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 order-xl-2">
-                        <div class="hex-wraper">
-                            <i class="apiary1 apiary-fillHex"></i>
-                            <div class="properties-cube-wrap first-row">
-                                <a href="#" class="single-properties" data-aos="fade-up">
-                                    <div class="single-properties-bg" style="background-image: url(assets/images/cta1BG.jpg);"></div>
-                                    <h3>Properties</h3>
-                                </a>
-                                <a href="#" class="single-properties" data-aos="fade-up">
-                                    <div class="single-properties-bg" style="background-image: url(assets/images/cta1BG.jpg);"></div>
-                                    <h3>VALUE MY HOME</h3>
-                                </a>
-                                <a href="" class="single-properties" data-aos="fade-up" data-aos-delay="300">
-                                    <div class="single-properties-bg" style="background-image: url(assets/images/cta1BG.jpg);"></div>
-                                    <h3>NEWS</h3>
-                                </a>
-                            </div>
-                            <i class="apiary2 apiary-fillHex"></i>
-                            <i class="apiary3 apiary-fillHex"></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 order-xl-1">
-                        <div class="welcomecmsContainer">
-                            <div class="welcomeInnerWrapper">
-                                <h1>Welcome to <br> WalkersXchange</h1>
-                                <div class="cmsRegion">
-                                    <div class="welcome-desc">
-                                        <p>As a family run Estate Agents, we offer a personalised service at an affordable price, taking the stress out of selling your home.</p>
-                                        <br>
-                                        <p>
-                                        Julie, John, Chris and Lynn have worked in the property industry for many years, ranging from new build, second hand market and renovations. Now assisting various housing developers, with on site sales and with their related sales.</p>
-                                    </div>
-                                    <br>
-                                    <div style="text-align: center" class="review-widget_net" data-uuid="132fe8c4-2779-4c96-82be-c9e38a1d2c28" data-template="8" data-filter="" data-lang="en" data-theme="light"><div class="grw-net-widget grw-net-widget-light"><a href="https://search.google.com/local/reviews?placeid=ChIJ47lSUdJ5fkgReup7_eKNK9o" class="grw-net-widget-four grw-net-widget-four-type-1" target="_blank"><div class="grw-net-widget-four-content"><div class="grw-net-widget-four-logo"><div class="grw-net-logo-r"></div></div><div class="grw-net-widget-four-rows"><div class="grw-net-stars grw-net-stars-5-0-star"><div class="grw-net-stars-star"></div><div class="grw-net-stars-star"></div><div class="grw-net-stars-star"></div><div class="grw-net-stars-star"></div><div class="grw-net-stars-star"></div></div><div class="grw-net-text"><div class="grw-net-text-big grw-net-text-medium">5</div><div class="grw-net-text-small">  stars, 61 reviews </div></div></div></div><div class="grw-net-widget-four-blue-tag"> Google Reviews </div></a><div class="branding" style="display: block !important; visibility: visible !important;text-align: center;margin-top: 0.3em;font-size: 10px;color: gray !important;">Provided by <a href="https://www.review-widget.net/">review-widget.net</a></div></div><script type="application/ld+json">{"@context":"https://schema.org/","@type":"LocalBusiness","name":false,"image":false,"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"ratingCount":61,"bestRating":5,"worstRating":1}}</script></div><script async="" type="text/javascript" src="https://grwapi.net/widget.min.js"></script>
-                                </div>
-                                <a class="btn btn-primary" href="#">
-                                    <span class="arrow-icon">
-                                        <i class="apiary-arrow"></i>
-                                    </span>
-                                    LEARN MORE
-                                </a>
-                            </div>
-                            <div class="tri"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end welcome area  -->
+        <!-- // END SEARCH PROPERTIES  -->
 
         <!-- start rating area  -->
-        <section class="rating-area">
-            <div class="container">
-                <div class="row">
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item">
-                            <div class="single-rating-inner">
-                                <h2>NE8</h2>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4>top performer</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item">
-                            <div class="single-rating-inner">
-                                <h2>NE23</h2>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4>top performer</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item">
-                            <div class="single-rating-inner">
-                                <h2>NE61</h2>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4>top performer</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item">
-                            <div class="single-rating-inner">
-                                <h2>NE66</h2>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4>top performer</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item dff-style">
-                            <div class="single-rating-inner">
-                                <h2>NE15</h2>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4>top performer</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item dff-style small-text-item">
-                            <div class="single-rating-inner">
-                                <h2>10 Weeks</h2>
-                                <h4>Average Sale Time</h4>
-                                <h6>From listing to offer</h6>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item dff-style small-text-item">
-                            <div class="single-rating-inner">
-                                <h2>99.6%</h2>
-                                <h4 class="mb-2">Asking Price <br>Achieved</h4>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- single item  -->
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <a href="" class="single-rating-item dff-style small-text-item">
-                            <div class="single-rating-inner">
-                                <h2>44</h2>
-                                <h4>Properties Listed</h4>
-                                <h6>In the last six months</h6>
-                                <h5>GET <span>AGENT</span>.co.uk</h5>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="section-padding vh-100"></section>
         <!-- end rating area  -->
 
-
-        <!-- Featured Section Start -->
-        <section class="hero-features-section featured section mb-5">
+        <!-- // START AREA GUIDES  -->
+        <section class="section-padding area-guide bg-primary">
             <div class="container">
-
-                <!-- Start Section Headings -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="sec-title text-end mb-5">
-                            <h2 class="fw-normal">Featured Properties</h2>
+                        <div class="section-title mb-5 text-center">
+                            <h2 class="heading text-white">Area Guides</h2>
                         </div>
                     </div>
                 </div>
-                <!-- End Section Headings -->
-                <!-- Swiper Slider -->
-                <div class="hero-featured__slider swiper-container slider-active">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="row g-0">
-                                <div class="col-xl-6">
-                                    <div class="hero-features hero-tri text-center" style="--hero-features-before-size: 400px;">
-                                        <h3 class="hero-title py-5">THOMAS STREET, STANLEY, DH9</h3>
-                                        <div class="price-box">
-                                            <p>SSTC</p>
-                                            <p>OIRO £79,950 Freehold</p>
-                                        </div>
-                                        <div class="details-box">
-                                            <ul class="list-inline fs-lg mb-5">
-                                                <li class="list-inline-item">2 BEDROOMS,</li>
-                                                <li class="list-inline-item">2 BATHROOMS,</li>
-                                                <li class="list-inline-item">2 RECEPTIONS,</li>
-                                            </ul>
-            
-                                            <div class="details-content mb-5">
-                                                <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, incidunt velit itaque magni quis, ducimus voluptatem deserunt quaerat corrupti sint nemo maiores error maxime. Quidem qui excepturi maiores veritatis quae dignissimos non omnis maxime asperiores.</p>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="area-guide-wrapper">
+                            <!-- Slider main container -->
+                            <div class="swiper guide-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide bg-white">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-slider__banner">
+                                                <img src="assets/images/Area-Guides/map.jpg" class="img-fluid w-100" alt="">
                                             </div>
-            
-                                            <div class="button-area">
-                                                <a class="btn btn-primary mx-3 mb-3 mx-lg-4" href="#">
-                                                    <span class="arrow-icon">
-                                                        <i class="apiary-arrow"></i>
-                                                    </span>
-                                                    FULL DETAILS
-                                                </a>
-                                                <a class="btn btn-primary mx-3 mb-3 mx-lg-4" href="#">
-                                                    <span class="arrow-icon">
-                                                        <i class="apiary-arrow"></i>
-                                                    </span>
-                                                    SAVE PROPERTY
-                                                </a>
-                                                <a class="btn btn-primary mx-3 mb-3 mx-lg-4" href="#">
-                                                    <span class="arrow-icon">
-                                                        <i class="apiary-arrow"></i>
-                                                    </span>
-                                                    ARRANGE A VIEWING
-                                                </a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="p-lg-4 swiper-slider__content">
+                                                <div class="section-title mb-4">
+                                                    <h2 class="heading">London, NW2</h2>
+                                                </div>
+                                                <p class="text-primary mb-3">I love that I can find everything in this friendly and welcoming neighbourhood- from parks to independent cafes, period architecture and plenty of shops on Cricklewood Broadway. Benefitting from both tube and Overground transport links, Cricklewood is instantly appealing to both families and young professionals.</p>
+                                                <p class="text-primary mb-3">I’ve lived in Cricklewood for the past eight years and consider myself a North West London expert personally and professionally. My two children go to school here; we eat in the cafes, play in the parks, and drink in the b...</p>
+                                                <button class="btn btn-rounded btn-outline-primary">Read more</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6">
-                                    <!-- Start Progress bar Line -->
-                                    <div class="line-progress-bar position-relative">
-                                        <div class="swiper-progress-line" id="slider-active-progress-line"></div>
-                                    </div>
-                                    <!-- End Progress bar Line -->
-                                    <div class="single-featured-banner-item" style="background-image: url(assets/images/properti-1.jpg);"></div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // END AREA GUIDES  -->
+
+        <!-- // START VIDEO VAULT  -->
+        <section class="section-padding video-vault-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title mb-5">
+                            <h2 class="title">Liana Loporto Video Vault</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-5">
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-body single-item h-100">
+                            <div class="single-item__thumb mb-3">
+                                <img src="https://via.placeholder.com/400x250" alt="">
+                            </div>
+                            <div class="single-item__detail">
+                                <div class="heading-info">
+                                    <p class="mb-3">14th February 2022</p>
+                                    <h5 class="mb-4 ff-primary">Top Tips when selling a property</h5>
+                                </div>
+                                <div class="single-item-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus sodales tellus faucibus, vel mollis nunc volutpat. Nulla scelerisque ante lectus, vitae semper ipsum interdum quis. Vivamus a laoreet.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="hero-container-arrow swiper-button-next"></div>
-                    <div class="hero-container-arrow swiper-button-prev"></div>
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-body single-item h-100">
+                            <div class="single-item__thumb mb-3">
+                                <img src="https://via.placeholder.com/400x250" alt="">
+                            </div>
+                            <div class="single-item__detail">
+                                <div class="heading-info">
+                                    <p class="mb-3">14th February 2022</p>
+                                    <h5 class="mb-4 ff-primary">Top Tips when selling a property</h5>
+                                </div>
+                                <div class="single-item-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus sodales tellus faucibus, vel mollis nunc volutpat. Nulla scelerisque ante lectus, vitae semper ipsum interdum quis. Vivamus a laoreet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-body single-item h-100">
+                            <div class="single-item__thumb mb-3">
+                                <img src="https://via.placeholder.com/400x250" alt="">
+                            </div>
+                            <div class="single-item__detail">
+                                <div class="heading-info">
+                                    <p class="mb-3">14th February 2022</p>
+                                    <h5 class="mb-4 ff-primary">Top Tips for choosing an Estate Agent</h5>
+                                </div>
+                                <div class="single-item-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus sodales tellus faucibus, vel mollis nunc volutpat. Nulla scelerisque ante lectus, vitae semper ipsum interdum quis. Vivamus a laoreet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 text-center">
+                        <button class="btn mt-5 btn-rounded btn-outline-primary">Show all videos</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="featured-grid-cube" data-200-bottom="bottom: -12.5vw;" data--200-top="bottom: -16.5vw;" style="bottom: -12.5vw;">
-                <i class="apiary-fillHex inlineHex"></i>
-                <i class="apiary-fillHex inlineHex"></i>
-                <i class="apiary-fillHex inlineHex"></i>
-                <i class="apiary-fillHex inlineHex"></i>
-                <i class="apiary-fillHex inlineHex"></i>
-            </div>
-
         </section>
-        <!-- Featured Section End -->
+        <!-- // END VIDEO VAULT  -->
 
-        <!-- Our Blog Section Start -->
-        <section class="blog-section section">
+        <!-- // START SOCIAL MEDIA  -->
+        <section class="section-padding social-follower-area bg-primary text-light">
             <div class="container">
-                <!-- Start Section Headings -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="sec-title text-end mb-5">
-                            <h2 class="fw-normal">Our Blog</h2>
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="content-area">
+                            <div class="section-title mb-4">
+                                <h2 class="text-white title">Follow me on social media</h2>
+                            </div>
+                            <div class="content-box mb-5">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus sodales tellus faucibus, vel mollis nunc volutpat. Nulla scelerisque ante lectus, vitae semper ipsum interdum quis. Vivamus a laoreet.</p>
+                            </div>
+                            <div class="social-list">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-lg-around mt-5">
-                    <div class="col-xl-4 col-lg-6 mb-5">
-                        <div class="our-blog__content text-center">
-                            <h3 class="fw-normal fs-3 mb-3">
-                                <a href="#">Government advice on home moving during the coronavirus (COVID-19) outbreak</a>
-                            </h3>
-                            <p class="fs-5">Covid-19 Government Advice <a href="#">Read more...</a></p>
+                    <div class="col-lg-6">
+                        <div class="gallery-area">
+                            <div class="row g-1">
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/100x150" alt="">
+                                    </div>
+                                </div>
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/300x150" alt="">
+                                    </div>
+                                </div>
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/400x400" alt="">
+                                    </div>
+                                </div>
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/300x250" alt="">
+                                    </div>
+                                </div>
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/100x150" alt="">
+                                    </div>
+                                </div>
+                                <!-- Single Gallery Item -->
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="gallery-single-item">
+                                        <img src="http://via.placeholder.com/100x150" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 mb-5">
-                        <div class="our-blog__content text-center">
-                            <h3 class="fw-normal fs-3 mb-3">
-                                <a href="#">Covid-19 IMPORTANT UPDATE</a>
-                            </h3>
-                            <p class="fs-5"><a href="#">Read more...</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-12 text-center mt-5">
-                        <a class="btn btn-primary" href="#">
-                            <span class="arrow-icon">
-                                <i class="apiary-arrow"></i>
-                            </span>
-                            READ MORE ARTICLES
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Our Blog Section End -->
+        <!-- // END SOCIAL MEDIA  -->
+
+        <!-- // START TESTIMONIALS  -->
+        <section class="section-padding bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-5">
+                            <h2 class="heading">What people say about Liana Loporto MNAEA</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper-container testimonial-active">
+                            <div class="swiper-wrapper">
+                                <!-- Swiper Slider -->
+                                <div class="swiper-slide py-5">
+                                    <div class="single-item bg-white px-5 py-5 rounded-3 text-center">
+                                        <div class="msg-content text-primary mb-4">
+                                            I would like to personally thank Liana for helping me sell my property in a seamless, timely and professional manner. In fact she not only met all my needs but also exceeded my expectations by offering great advice and referring me to very good solicitors. I would highly recommend her to everyone without a shadow of doubt. Thank you Liana from the bottom of my heart.
+                                        </div>
+                                        <div class="msg-author">
+                                            <h5 class="ff-primary text-primary">Richard Twigs</h5>
+                                            <p><i>February 2022</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swiper Slider -->
+                                <!-- Swiper Slider -->
+                                <div class="swiper-slide py-5">
+                                    <div class="single-item bg-white px-5 py-5 rounded-3 text-center">
+                                        <div class="msg-content text-primary mb-4">
+                                            I would like to personally thank Liana for helping me sell my property in a seamless, timely and professional manner. In fact she not only met all my needs but also exceeded my expectations by offering great advice and referring me to very good solicitors. I would highly recommend her to everyone without a shadow of doubt. Thank you Liana from the bottom of my heart.
+                                        </div>
+                                        <div class="msg-author">
+                                            <h5 class="ff-primary text-primary">Richard Twigs</h5>
+                                            <p><i>February 2022</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swiper Slider -->
+                                <!-- Swiper Slider -->
+                                <div class="swiper-slide py-5">
+                                    <div class="single-item bg-white px-5 py-5 rounded-3 text-center">
+                                        <div class="msg-content text-primary mb-4">
+                                            I would like to personally thank Liana for helping me sell my property in a seamless, timely and professional manner. In fact she not only met all my needs but also exceeded my expectations by offering great advice and referring me to very good solicitors. I would highly recommend her to everyone without a shadow of doubt. Thank you Liana from the bottom of my heart.
+                                        </div>
+                                        <div class="msg-author">
+                                            <h5 class="ff-primary text-primary">Richard Twigs</h5>
+                                            <p><i>February 2022</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swiper Slider -->
+                                <!-- Swiper Slider -->
+                                <div class="swiper-slide py-5">
+                                    <div class="single-item bg-white px-5 py-5 rounded-3 text-center">
+                                        <div class="msg-content text-primary mb-4">
+                                            I would like to personally thank Liana for helping me sell my property in a seamless, timely and professional manner. In fact she not only met all my needs but also exceeded my expectations by offering great advice and referring me to very good solicitors. I would highly recommend her to everyone without a shadow of doubt. Thank you Liana from the bottom of my heart.
+                                        </div>
+                                        <div class="msg-author">
+                                            <h5 class="ff-primary text-primary">Richard Twigs</h5>
+                                            <p><i>February 2022</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swiper Slider -->
+                                <!-- Swiper Slider -->
+                                <div class="swiper-slide py-5">
+                                    <div class="single-item bg-white px-5 py-5 rounded-3 text-center">
+                                        <div class="msg-content text-primary mb-4">
+                                            I would like to personally thank Liana for helping me sell my property in a seamless, timely and professional manner. In fact she not only met all my needs but also exceeded my expectations by offering great advice and referring me to very good solicitors. I would highly recommend her to everyone without a shadow of doubt. Thank you Liana from the bottom of my heart.
+                                        </div>
+                                        <div class="msg-author">
+                                            <h5 class="ff-primary text-primary">Richard Twigs</h5>
+                                            <p><i>February 2022</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Swiper Slider -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // END TESTIMONIALS -->
+
+        <!-- // FOOTER BRAND  -->
+        <section class="section-padding-02 footer-brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper-container brand-container">
+                            <div class="swiper-wrapper">    
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x150" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/400x250" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/400x60" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/150x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x100" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-brand">
+                                        <img src="https://via.placeholder.com/200x100" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // END FOOTER BRAND -->
 
         <!-- Footer Start -->
-        <footer class="footer-section section">
-            <div class="footer-section-inner">
-                <span class="footer--tri"></span>
-                <span class="footer--tri"></span>
-                <span class="footer--tri"></span>
-
-                <!-- Scroll Top Button Start -->
-                <span class="scroll-top">
-                    <span class="scroll-top-btn" id="backBtn">
-                        <i class="apiary-fillHex"></i>
-                        <i class="arrow-icon apiary-dArrows"></i>
-                    </span>
-                    <!-- Scroll Top Button End -->
-                </span>
-
+        <footer class="footer-section">
+            <div class="footer-top">
                 <div class="container">
-                    <!-- Footer Social Start-->
-                    <div class="footer-social-links text-center">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <span class="cube__shape"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Footer Social End-->
-                    <div class="footer-brand-wrapper">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-8">
-                                <div class="swiper-container brand-container">
-                                    <div class="swiper-wrapper">
-            
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x100" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x150" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/400x250" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/400x60" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/150x100" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x100" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x100" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x100" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="single-brand">
-                                                <img src="https://via.placeholder.com/200x100" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="footer-top__brand d-flex gap-4 align-items-center">
+                                <div class="single-brand">
+                                    <img src="https://via.placeholder.com/150x80" alt="">
+                                </div>
+                                <div class="single-brand">
+                                    <img src="https://via.placeholder.com/150x80" alt="">
+                                </div>
+                                <div class="single-brand">
+                                    <img src="https://via.placeholder.com/150x80" alt="">
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-8 text-lg-end">
+                            <div class="footer-top__info">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="#">07460 088 110</a></li>
+                                    <li class="list-inline-item"><a href="#">liana.loporto-browne@exp.uk.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Footer Brand End -->
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="my-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle mb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="footer-middle-content">
+                                <p>eXp World UK Limited is a registered company at Level 37, 25 Canada Square, London, E14 5LQ. 
+                                    Registered company Number is 12016573.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="social-follow text-end">
+                                <h6 class="text-white mb-3">Follow me on:</h6>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
 
-                    <div class="footer-bottom text-center">
-                        <p class="text-black-50">Web Design by <a href="#">TECHNICWEB</a> / All content © 2022 WalkersXchange | <a href="http://" target="_blank" rel="noopener noreferrer">[+Sitemap]</a> | <a href="http://" target="_blank" rel="noopener noreferrer">Terms & Conditions</a> | <a href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | <a href="http://" target="_blank" rel="noopener noreferrer">Cookie policy</a></p>
-                        <p class="text-black-50">74 Cornmoor Road, Whickham, Newcastle Upon Tyne, NE16 4PY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-copyright-content">
+                                <p class="mb-0">© eXp 2022. All rights reserved  |  <a href="#">Privacy Policy</a>  |  <a href="#">Complaints Procedure</a>  | <a href="#">Website by Loop Software</a>  |  Powered by Loop <a href="#">Software</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

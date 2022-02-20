@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;500;600;700;900&display=swap');
+
+$min-contrast-ratio: 3;
 
 // Font Family
-$ff-primary: 'Quicksand', sans-serif;
-$ff-secondary: 'Catamaran', sans-serif;
-$ff-fa: 'FontAwesome';
+$ff-primary: 'Montserrat', sans-serif;
+$ff-secondary: 'Playfair Display', serif;
+$ff-fa: "Font Awesome 5 Pro";
 
 // THEME COLORS
-// $primary: #0D3483;
+$primary: #09033F;
 // $secondary: #2611A8;
 // $success: #4CAF50;
 // $danger: #F44336;
-// $warning: #FFC107;
+$warning: #e67615;
 // $info: #17a2b8;
 // $light: #f8f9fa;
 // $dark: #343a40;
@@ -119,3 +121,14 @@ $social-colors : (
     youtube         : #cd201f,
 );
 
+
+
+// Bootstrap Customize
+
+
+// Button
+$btn-padding-y: 0.6rem;
+$btn-padding-x: 2rem;
+
+// CARD
+$card-border-width: 0;

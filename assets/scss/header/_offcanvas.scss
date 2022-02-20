@@ -3,7 +3,7 @@
 /*----------------------------------------*/
 
 .offcanvas{
-    background: $grey;
+    background: $gray-100;
     width: 100%;
 }
 
@@ -14,7 +14,7 @@
         border: 0;
         font-size: 18px;
         color: $black;
-        transition: $transition-default;
+        transition: $transition-base;
 
         &:hover {
             color: $primary;
@@ -61,7 +61,7 @@
                     background-color: $black;
                     top: 50%;
                     transform: translateY(-50%);
-                    transition: $transition-default;
+                    transition: $transition-base;
             
                 }
                 
@@ -74,7 +74,7 @@
                     bottom: 0;
                     background-color: $black;
                     transform: translateX(-50%);
-                    transition: $transition-default;
+                    transition: $transition-base;
                 }
 
             }

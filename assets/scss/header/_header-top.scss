@@ -5,98 +5,45 @@
 // Header
 .header {
     z-index: 999;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 100%; top: 0;
+    left: 0; right: 0;
 
     &-top{
         width: 100%;
-        background: $white;
         color: $black;
 
         @include media-breakpoint-up(lg){
-            padding: 20px 0;
+            padding-top: var(--header-padding-top, 3.75rem);
+            padding-bottom: 0.75rem;
         }
     }
 }
 
 
-// Header Logo 
-.header-logo {
-    
-}
-
 // Header Navigation
 .header-navigation {
-    background: whitesmoke;
-    // display: none;
     & .main-menu {
         display: flex;
 
-        @media(min-width: 991px){
-            & > li:not(:first-child):before{
-                --menu-list-item-dot-size: 3px;
-                content: "";
-                width: var(--menu-list-item-dot-size);
-                height: var(--menu-list-item-dot-size);
-                background: $black;
-                border-radius: 50em;
-                position: absolute;
-                left: -2px;
-                top: 50%;
-            }
-        }
-
         & li {
             position: relative;
-            padding: 55px 15px;
-
-            .apiary-dArrows {
-                transform: translateX(-50%) rotate(-90deg);
-                position: absolute;
-                left: 50%;
-                bottom: 30px;
-                @media #{$tablet-device}{
-                    display: none;
-                }
-            }
+            padding: 20px 15px;
             & a {
                 font-size: 16px;
                 font-weight: 500;
-                font-family: $body-font;
-                color: $black;
+                font-family: $ff-primary;
+                color: var(--menu-link-color, $gray-300);
             }
 
-            &.active-menu {
-
-                & > a {
-                    color: $primary;
-                }
-
-                & > .menu-icon  {
-
-                    &::after {
-                        color: $primary;
-                    }
-                }
-            }
-
+            &.active-menu, 
             &:hover {
-
-                & > .menu-icon,
-                & > a {
-                    color: $primary;
-
-                    &::after {
-                        color: $primary;
-                    }
-                }
-
-
-                & .sub-menu {
-                    opacity: 1;
-                    visibility: visible;
-                    top: 100%;
-                }
+                --menu-link-color: var(--sticky-color, #{$white});
+            }
+            &:hover .sub-menu {
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
             }
 
             & .menu-icon {
@@ -107,7 +54,7 @@
                     font-size: 10px;
                     color: $white;
                     margin-left: 5px;
-                    transition: $transition-default;
+                    transition: $transition-base;
                 }
             }
 
@@ -124,7 +71,7 @@
                 border-top: 2px solid $primary;
                 opacity: 0;
                 visibility: hidden;
-                transition: $transition-default;
+                transition: $transition-base;
 
                 & li {
                     padding: 0;
@@ -132,7 +79,7 @@
                     & a {
                         padding: 5px 30px;
                         font-size: 16px;
-                        font-family: $body-font;
+                        font-family: $ff-primary;
                         font-weight: 500;
                         color: #2e3d49;
                         text-transform: capitalize;
@@ -150,7 +97,7 @@
                             height: 2px;
                             opacity: 0;
                             visibility: hidden;
-                            transition: $transition-default;
+                            transition: $transition-base;
 
                         }
                     }
@@ -216,15 +163,12 @@
         flex-direction: column;
         gap: 10px;
         &.desktop-trigger {
-            @media #{$tablet-device}{
-                display: none;
-            }
+            // @media #{$tablet-device}{
+            //     display: none;
+            // }
         }
         &.mobile-trigger {
             display: none;
-            @media #{$tablet-device}{
-                display: inline-flex;
-            }
         }
         &:hover{
             
@@ -255,38 +199,46 @@
             height: 3px;
             background: $black;
             display: block;
-            transition: $transition-default;
+            transition: $transition-base;
         }
     }
 }
 
-// Header Sticky
-// .sticky-fixed {
-//     position: fixed;
-//     animation: sticky 1s;
-//     .header-top {
-//         box-shadow: 0px 0px 16px 0px rgba($black, 0.07);    
-//     }
-// }
+.header-contact-info a{
+    color: var(--contact-info-color, $gray-200);
 
-// @keyframes sticky {
-//     0% {
-//         transform: translateY(-100%);
-//     }
-//     100% {
-//         transform: translateY(0%);
-//     }
-// }
+    &:hover{
+        --contact-info-color: #{$gray-200};
+    }
+}
 
+.social-links a{
+    border: 2px solid rgba($white, 0.5);
+    --icon-size: 35px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50em;
+    transition: $transition-base;
+
+    &:hover{
+        background: $white;
+        color: $primary;
+    }
+}
 
 /********************* Sticky Menu
 ***********************************************************************/
 .sticky-fixed {
+    --sticky-color: #{$gray-900};
     position: fixed;
     top: var(--sticky-menu-top, 0);
     left: 0;
     right: 0;
-    background: #fff;
+    background: $primary;
     z-index: 999;
     transition: all 0.2s ease-in-out;
     -webkit-animation-name: header_animation;
@@ -297,10 +249,17 @@
     animation-iteration-count: 1;
     -webkit-animation-delay: false;
     animation-delay: false;
+    box-shadow: 0px 0px 16px 0px rgba($black, 0.07);
+    
+    .header-navbar{
+        background-color: $white;
+    }
+    
+    &.sticky-menu {
+      --sticky-menu-top: -3rem;
+    }
   }
-  .sticky-fixed.sticky-menu {
-    --sticky-menu-top: -6rem;
-  }
+
   @-webkit-keyframes header_animation {
     0% {
       -webkit-transform: translate3d(0, -70px, 0);
@@ -322,3 +281,11 @@
     }
   }
   
+
+
+//   DropDown Icon
+.dropdown-icon:after{
+    font-family: $ff-fa;
+    content: "\f107";
+    font-weight: 300;
+}

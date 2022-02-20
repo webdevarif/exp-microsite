@@ -67,7 +67,7 @@
 
     var header = document.getElementById('header-sticky');
     var toggled;
-    var threshold = 80;
+    var threshold = 150;
 
     var checkScroll = function() {
     curScroll = w.scrollY || doc.scrollTop;
@@ -274,28 +274,46 @@
 
     });
 
+    /*--
+        Area Guide Slider
+	-----------------------------------*/
+    var autoplay = 5000;
+    var swiper = new Swiper('.guide-container', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 800,
+        lazy: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: true,
+
+    });
+
    /*--
     Slider Active
 	-----------------------------------*/
     var autoplay = 5000;
-    var swiper = new Swiper('.slider-active', {
-        slidesPerView: 1,
+    var swiper = new Swiper('.testimonial-active', {
+        slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
         loop: true,
-        speed: 1000,
-        lazy: true,
-        navigation: {
-            nextEl: '.hero-container-arrow.swiper-button-next',
-            prevEl: '.hero-container-arrow.swiper-button-prev',
+        spaceBetween: '10%',
+        slideToClickedSlide: true,
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 2,
+            },
         },
         fadeEffect: {
             crossFade: true,
         },
-        autoplay: true,
-        onProgress: move
     });
-
-    function move() {
-    }
 
 
     /*--
