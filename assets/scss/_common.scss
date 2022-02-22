@@ -52,6 +52,9 @@ h1{
     @include media-breakpoint-up(lg){
         --heading-fs: 50px;
     }
+    @include media-breakpoint-down(sm){
+        --heading-fs: 25px;
+    }
 }
 h2{
     font-size: 26px;
@@ -179,26 +182,19 @@ input, textaArifArea {
 
 /*--Section Title--*/
 .section-title{
-    .heading,
-    .title{
+    .heading{
         display: inline-block;
-        font-size: 44px;
-        line-height: 64px;
+        font-size: var(--section-title-fs, 30px);
+        line-height: var(--section-title-lh, 44px);
         font-family: $ff-secondary;
         font-weight: 700;
         color: $primary;
         position: relative;
-    }
-    .title:before{
-        content: "";
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background: currentColor;
-        display: inline-block;
+
+        @include media-breakpoint-up(xl){
+            --section-title-fs: 44px;
+            --section-title-lh: 64px;
+        }
     }
 }
 
@@ -208,7 +204,7 @@ input, textaArifArea {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
+
     & .swiper-pagination-bullet {
         border-radius: 50%;
         background-color: #e1e1e1;
@@ -243,3 +239,83 @@ input, textaArifArea {
 .card-body{
     padding: 2rem;
 }
+
+
+
+.overflow-container {
+    overflow: hidden;
+    display: block;
+  }
+  
+  .overflow-container .overflow-inner {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    display: block;
+  }
+  
+  .delay1 {
+    -webkit-animation-duration: 0.3s !important;
+            animation-duration: 0.3s !important;
+  }
+  
+  .delay2 {
+    -webkit-animation-duration: 0.5s !important;
+            animation-duration: 0.5s !important;
+  }
+  
+  .delay3 {
+    -webkit-animation-duration: 0.7s !important;
+            animation-duration: 0.7s !important;
+  }
+  
+  .delay4 {
+    -webkit-animation-duration: 0.9s !important;
+            animation-duration: 0.9s !important;
+  }
+  
+  .animation-delay1 {
+    -webkit-transition-delay: 0.3s !important;
+            transition-delay: 0.3s !important;
+  }
+  
+  .animation-delay2 {
+    -webkit-transition-delay: 0.5s !important;
+            transition-delay: 0.5s !important;
+  }
+  
+  .animation-delay3 {
+    -webkit-transition-delay: 0.7s !important;
+            transition-delay: 0.7s !important;
+  }
+  
+  .animation-delay4 {
+    -webkit-transition-delay: 0.9s !important;
+            transition-delay: 0.9s !important;
+  }
+  
+  .animation-delay5 {
+    -webkit-transition-delay: 1.1s !important;
+            transition-delay: 1.1s !important;
+  }
+  
+  .animation-delay6 {
+    -webkit-transition-delay: 1.3s !important;
+            transition-delay: 1.3s !important;
+  }
+  
+  .animation-delay7 {
+    -webkit-transition-delay: 1.5s !important;
+            transition-delay: 1.5s !important;
+  }
+  
+  .animation-delay8 {
+    -webkit-transition-delay: 1.7s !important;
+            transition-delay: 1.7s !important;
+  }
+  
+  .animation-delay9 {
+    -webkit-transition-delay: 1.9s !important;
+            transition-delay: 1.9s !important;
+  }

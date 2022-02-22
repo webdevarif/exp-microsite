@@ -3,7 +3,7 @@
       
 	$(window).on('load', function () {
 		aosAnimation();
-		wowAnimation();
+        buttonAnimation();
 	});
 
 	/*=============================================
@@ -17,22 +17,10 @@
 			disable: 'mobile',
 		});
 	}
-
-	/*=============================================
-		=    		 Wow Active  	         =
-	=============================================*/
-	function wowAnimation() {
-		var wow = new WOW({
-			boxClass: 'wow',
-			animateClass: 'animated',
-			offset: 0,
-			mobile: false,
-			live: true
-		});
-		wow.init();
+   
+	function buttonAnimation() {
 	}
-
-    
+   
     /*--
         preloader
     -----------------------------------*/
@@ -295,30 +283,15 @@
     var swiper = new Swiper('.hero-container', {
         pagination: {
             el: ".hero-container .swiper-pagination",
+            clickable: true,
         },
         loop: true,
-        grabCursor: true,
+        grabCursor: false,
         speed: 1000,
         paginationClickable: true,
         parallax: true,
         autoplay: false,
         effect: 'fade',
-        // fadeEffect: {
-        //     crossFade: true
-        // },
-        // autoplayDisableOnInteraction: false,
-        // loop: true,
-        // onSlideChangeStart: function (s) {
-        //     var currentSlide = $(s.slides[s.activeIndex]);
-        //     currentSlide.find('#swipeLeft').removeClass('animated slideInLeft');
-        //     currentSlide.find('#swipeRight').removeClass('animated slideInRight');
-            
-        // },
-        // onSlideChangeEnd: function (s) {
-        //     var currentSlide = $(s.slides[s.activeIndex]);
-        //     currentSlide.find('#swipeLeft').addClass('animated slideInLeft');
-        //     currentSlide.find('#swipeRight').addClass('animated slideInRight');      
-        // }
     });
 
     /*--
@@ -333,6 +306,14 @@
         effect: 'fade',
         fadeEffect: {
           crossFade: true
+        },
+        navigation: {
+            nextEl: '.guide-container .swiper-arrow.next',
+            prevEl: '.guide-container .swiper-arrow.prev',
+        },
+        pagination: {
+            el: ".guide-container .swiper-pagination",
+            clickable: true,
         },
         autoplay: true,
 
@@ -356,8 +337,13 @@
               slidesPerView: 2,
             },
         },
+        navigation: {
+            nextEl: '.sold-container .swiper-arrow.next',
+            prevEl: '.sold-container .swiper-arrow.prev',
+        },
         pagination: {
             el: ".sold-container .swiper-pagination",
+            clickable: true,
         },
         fadeEffect: {
             crossFade: true,
@@ -466,3 +452,31 @@
             overflow: true
         });
     }
+
+
+
+
+
+
+    
+$( ".avs-button-inner" ).mouseenter(function(e) {
+    var parentOffset = $(this).offset(); 
+    
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".avs-button-circle").css({"left": relX, "top": relY });
+    $(this).prev(".avs-button-circle").removeClass("desplode-circle");
+    $(this).prev(".avs-button-circle").addClass("explode-circle");
+    
+    });
+    
+    $( ".avs-button-inner" ).mouseleave(function(e) {
+    
+        var parentOffset = $(this).offset(); 
+    
+        var relX = e.pageX - parentOffset.left;
+        var relY = e.pageY - parentOffset.top;
+        $(this).prev(".avs-button-circle").css({"left": relX, "top": relY });
+        $(this).prev(".avs-button-circle").removeClass("explode-circle");
+        $(this).prev(".avs-button-circle").addClass("desplode-circle");
+    });

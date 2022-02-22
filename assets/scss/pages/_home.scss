@@ -6,16 +6,36 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 100px 0;
-        min-height: calc(100vh - 90px);
+        padding: 250px 0 70px;
         filter: sepia(100%);
         transition: all 1s linear;
         transition-delay: 1s;
-    }
-    .swiper-slide-active .single-slider{
-        filter: sepia(0%);
 
+        @include media-breakpoint-up(lg){
+            min-height: calc(100vh - 90px);
+        }
     }
+    
+    .heading {
+        align-self: flex-start;
+        margin: 0 0 auto 0;
+        transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s;
+        transform: translate3d(-20%, 0, 0);
+        opacity: 0;
+    }
+    .swiper-slide-active {
+
+
+        .single-slider{
+            filter: sepia(0%);
+        }
+
+        .heading{
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+
 }
 
 
@@ -46,11 +66,62 @@
         }
     }
 }
+
+// AREA GUIDE AREA
+.area-guide {
+    .swiper-pagination{
+        & .swiper-pagination-bullet {
+            border-radius: 50%;
+            background-color: #e1e1e1;
+            width: var(--swiper-pagination-bullet-size, 8px);
+            height: var(--swiper-pagination-bullet-size, 8px);
+            transition: $transition-base;
+            opacity: 1;
+              
+            &.swiper-pagination-bullet-active{
+                background-color: var(--pg-active-color, $white);
+                --swiper-pagination-bullet-size: 13px;
+            }
+        }
+    }
+}
+
 // VIDEO VAULT AREA
 .video-vault-area {
 
     .single-item{
         transition: $transition-base;
+
+        &__thumb{
+            position: relative;
+            height: 250px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &:before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: $black;
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0.5;
+            }
+        }
+        &__play-btn{
+            padding: 10px 20px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white;
+            border-radius: 0.5rem;
+        }
 
         &:hover{
             box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !important;
@@ -95,29 +166,30 @@
     .swiper-slide-active .single-item{
         box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !important;
         position: relative;
+        --icon-size: 80px;
 
-        &:before{
+        &:before,
+        &:after{
             position: absolute;
-            font-family: $ff-fa;
-            font-weight: 600;
-            content: "\f10d";
-            top: -50px;
+            content: "";
+            background-image: url('../images/icons/quotes-up.svg');
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &:before{
+            top: -40px;
             left: 0px;
-            font-size: 4em;
-            color: $primary;
             @include media-breakpoint-up(xl){
                 left: -30px;
             }
         }
         &:after{
-            position: absolute;
-            font-family: $ff-fa;
-            font-weight: 600;
-            content: "";
             bottom: -50px;
             right: 0px;
-            font-size: 4em;
-            color: $primary;
+            transform: scaleX(-1);
             @include media-breakpoint-up(xl){
                 right: -30px;
             }

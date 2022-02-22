@@ -1,48 +1,45 @@
 /*--
 /*  2.3 - Button CSS
 /*----------------------------------------*/
-.btn{
-    &-rounded{
+.btn {
+    &-rounded {
         border-radius: 0.5rem 0 0.5rem 0;
     }
 
-    &-outline{
+    &-outline {
         outline: none;
         border: 0;
         color: var(--outline-btn-color, currentColor);
         cursor: pointer;
-        font-size:16px;
+        font-size: 13px;
         font-weight: 400;
         line-height: 45px;
-        max-width: 180px; 
+        min-width: 160px;
+        padding: 0 20px;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        width: 100%; 
         background: transparent;
-        font-weight: 100;
 
         svg {
             height: 45px;
             left: 0;
             position: absolute;
-            top: 0; 
-            width: 100%; 
-          }
-          
-          rect {
+            top: 0;
+            width: 100%;
+        }
+
+        rect {
             fill: none;
             stroke: var(--outline-btn-color, currentColor);
-            stroke-width: 2;
+            stroke-width: 5;
             stroke-dasharray: 422, 0;
             transition: all 0.35s linear;
-          }
+        }
 
-          &:hover{
+        &:hover {
             background: var(--outline-btn-bg, rgba($primary, 0));
-            font-weight: 900;
-            letter-spacing: 1px;
-            
+
             rect {
                 stroke-width: 5;
                 stroke-dasharray: 15, 310;
@@ -51,14 +48,205 @@
             }
         }
     }
-    
-    &-outline--light{
+
+    &-outline--light {
         --outline-btn-color: #{$white};
         --outline-btn-bg: rgba($primary, 0);
     }
 
-    &-outline--primary{
+    &-outline--primary {
         --outline-btn-color: #{$primary};
         --outline-btn-bg: rgba($primary, 0);
+    }
+}
+
+
+
+// BUTTON
+.avs-button {
+    overflow: hidden;
+    background: var(--avs-button-bg, transparent);
+    position: relative;
+    display: inline-flex;
+    border-radius: 0.5rem 0 0.5rem 0;
+
+    &-circle {
+        // background-color: red;
+        border-radius: 1000px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        pointer-events: none;
+        /*animation-timing-function: ease-in-out; */
+    }
+
+    &-inner {
+        display: inline-block;
+        background: transparent;
+        color: var(--avs-button-color, $primary);
+        text-align: center;
+        border: 2px solid var(--avs-button-border-color, $primary);
+        transition: 400ms;
+        text-decoration: none;
+        border-radius: 0.5rem 0 0.5rem 0;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        z-index: 10;
+        font-weight: 400;
+        line-height: 1.5;
+        
+        &:hover{
+            color: var(--avs-button-hover-color, $white);
+        }
+    }
+
+    &-text {
+        position: relative;
+        z-index: 9;
+        white-space: nowrap;
+    }
+
+    &-light {
+        --avs-button-border-color: #{$white};
+        --avs-button-color: #{$white};
+        --avs-button-hover-color: #{$primary};
+        --explode-circle-anim: explodeLight;
+        --desplode-circle-anim: desplodeLight;
+    }
+
+    &-warning {
+        --avs-button-bg: #{$warning};
+        --avs-button-border-color: #{$warning};
+        --avs-button-color: #{$white};
+        --avs-button-hover-color: #{$warning};
+        --explode-circle-anim: explodeLight;
+        --desplode-circle-anim: desplodeLight;
+    }
+
+    .explode-circle {
+        animation: var(--explode-circle-anim, explodePrimary) 0.5s forwards;
+
+    }
+
+    .desplode-circle {
+        animation: var(--desplode-circle-anim, desplodePrimary) 0.5s forwards;
+    }
+}
+
+@keyframes explodePrimary {
+    0% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(var(--bs-primary-rgb), 0.2);
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(var(--bs-primary-rgb), 1);
+    }
+}
+
+@keyframes desplodePrimary {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(var(--bs-primary-rgb), 0.8);
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(var(--bs-primary-rgb), 1);
+    }
+}
+
+@keyframes explodeLight {
+    0% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(var(--bs-light-rgb), 0.2);
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(var(--bs-light-rgb), 1);
+    }
+}
+
+@keyframes desplodeLight {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(var(--bs-light-rgb), 0.8);
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(var(--bs-light-rgb), 1);
+    }
+}
+
+
+// Swiper Navigation
+.swiper-navigation{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    position: relative;
+    z-index: 99;
+    .swiper-arrow{
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+// SCROLL TOP BUTTON
+.scroll-top{
+    --icon-size: #{40px};
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba($white, 0.6);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background: $primary;
+    color: rgba($white, 0.6);
+    z-index: 9999;
+
+    &:hover{
+        border-color: $white;
+        color:$white;
     }
 }
